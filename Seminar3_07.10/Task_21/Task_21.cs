@@ -32,8 +32,8 @@ internal class Program
         Console.WriteLine("-----------------------------------");
 
         double distance = Math.Sqrt((Math.Pow((xB - xA), 2))
-                                + (Math.Pow((yB - yA), 2))
-                                + (Math.Pow((zB - zA), 2)));
+                                  + (Math.Pow((yB - yA), 2))
+                                  + (Math.Pow((zB - zA), 2)));
 
         Console.WriteLine($"A ({xA}, {yA}, {zA}); B ({xB}, {yB}, {zB}) -> {Math.Truncate(distance * 100) / 100}");
     }
