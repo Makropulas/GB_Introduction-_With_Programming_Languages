@@ -13,13 +13,7 @@ namespace DZ_Seminar5
             int[] array = new int[new Random().Next(4, 10)];
             FillArray(array);
             Console.WriteLine($"[{String.Join(", ", array)}]");
-
-            int count = 0;
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] % 2 == 0) count++;
-            }
-            Console.WriteLine($"Количество чётных чисел в массиве: {count}");
+            Console.WriteLine($"Количество чётных чисел в массиве: {AmountEvensNumbers(array)}");
         }
 
         public static void FillArray(int[] arr)
@@ -28,6 +22,15 @@ namespace DZ_Seminar5
             {
                 arr[i] = new Random().Next(100, 1000);
             }
+        }
+        public static int AmountEvensNumbers(int[] arr)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 0) count++;
+            }
+            return count;
         }
     }
 }
